@@ -1,0 +1,209 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
+:root {
+  /* ### Primary */
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+  /* ### Neutral */
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+  /* Gradients */
+  /* - Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+- Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%) */
+}
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body,
+main.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body {
+  background-repeat: no-repeat;
+  font-family: "Josefin Sans", sans-serif;
+  background: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+  height: calc(106vh - 1px);
+}
+main.container {
+  padding-top: 30px;
+}
+.main-h1,
+.main-paragraph,
+.email-button,
+.attribution,
+#caution-massege {
+  text-align: center;
+}
+.images .hero-desktop,
+.logo-desktop {
+  display: none;
+}
+img {
+  max-width: 100%;
+}
+.images > .logo-mobile {
+  margin: 0px 0 30px 30px;
+  max-width: 100%;
+  display: flex;
+}
+.main-h1 {
+  font-size: 3rem;
+  padding: 20px 30px 10px 30px;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 10px;
+}
+.h1-span {
+  color: var(--Desaturated-Red);
+}
+.main-paragraph {
+  padding: 0 10px;
+  color: var(--Desaturated-Red);
+  line-height: 23px;
+  letter-spacing: 0.5px;
+}
+.email-button {
+  position: relative;
+  margin: 10px;
+  margin-bottom: 30px;
+}
+.email-input {
+  width: 90%;
+  height: 40px;
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid #f0e8e9;
+  opacity: 0.8;
+  margin: 2rem 0 0 1.5rem;
+}
+.btn {
+  font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  background: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+  color: white;
+  width: 65px;
+  height: 46px;
+  border-radius: 40px;
+  margin-left: 10px;
+  cursor: pointer;
+}
+.btn:hover {
+  background: #f8cccd;
+  transform: translateY(2px);
+}
+.error {
+  visibility: hidden;
+}
+#caution-massege {
+  font-size: 0.7rem;
+  color: var(--Soft-Red);
+  visibility: hidden;
+  text-align: left;
+  left: 14%;
+  bottom: -29%;
+}
+.error-and-btn {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  right: 0%;
+  top: 41%;
+}
+#caution-massege {
+  position: absolute;
+}
+footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.attribution {
+  color: var(--Desaturated-Red);
+  position: absolute;
+  display: flex;
+  align-items: end;
+  margin-top: 1rem;
+  white-space: nowrap;
+  font-size: 11px;
+}
+.attribution a {
+  color: var(--Dark-Grayish-Red);
+  text-decoration: none;
+  margin-left: 2px;
+}
+@media screen and (min-width: 768px) {
+  body {
+    background-image: url(images/bg-pattern-desktop.svg);
+    background-position: left -160px;
+    background-repeat: no-repeat;
+  }
+  main.container {
+    flex-direction: row-reverse;
+    background: none;
+  }
+  .hero-mobile,
+  .images > .logo-mobile {
+    display: none;
+  }
+  .images .hero-desktop,
+  .logo-desktop {
+    display: flex;
+  }
+  header,
+  header > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  header {
+    align-items: center;
+    width: 70%;
+    position: relative;
+  }
+  header > div {
+    width: 65%;
+    align-items: baseline;
+    margin-top: 3rem;
+  }
+  .logo-desktop {
+    max-width: 100%;
+    margin-left: 2rem;
+    position: absolute;
+    top: -15%;
+  }
+  .main-h1 {
+    text-align: left;
+    font-size: 3rem;
+    padding: 20px 30px 10px 30px;
+    line-height: 3.5rem;
+    width: 80%;
+    letter-spacing: 10px;
+  }
+  .main-paragraph {
+    text-align: left;
+    padding: 0 10px;
+    margin-left: 1.5rem;
+    width: 85%;
+    letter-spacing: 0.5px;
+    margin-top: 1rem;
+    line-height: 1.5rem;
+  }
+  .email-button {
+    width: 80%;
+    margin-top: 2rem;
+  }
+}
